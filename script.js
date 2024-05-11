@@ -36,3 +36,15 @@ next_btn.addEventListener("click", (e)=>{
     }
     changeSlide();
 })
+
+
+//scroll de productos. este evento funciona con la rueda del mouse
+
+const scrollContainer= document.querySelectorAll(".products");
+for(const item of scrollContainer){
+  item.addEventListener("wheel", (evt)=>{
+    evt.preventDefault();
+    item.scrollLeft += evt.deltaY;
+  });
+}
+
